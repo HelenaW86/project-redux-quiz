@@ -10,6 +10,7 @@ const NextButton = styled.button`
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   border: 2px solid white;
+  margin-top: 20px;
   &:hover {
     background-color: white;
     color: black;

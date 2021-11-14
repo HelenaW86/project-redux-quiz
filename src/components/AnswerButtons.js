@@ -12,7 +12,7 @@ const QuestionButtonWrapper = styled.div`
   height: 110px;
   gap: 5px;
   justify-content: center;
-
+  margin-top: 15px;
   @media (min-width: 768px) {
     height: 100px;
     align-items: center;
@@ -28,10 +28,13 @@ const QuestionButton = styled.button`
   justify-content: center;
   align-items: center;
   color: white;
-  height: 45px;
+  height: 60px;
   background-color: transparent;
   font-weight: bold;
   cursor: pointer;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
   &:active {
     top: 0.5em;
   }

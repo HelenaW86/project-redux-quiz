@@ -27,6 +27,8 @@ const QuestionText = styled.h1`
 
 const ImageContainer = styled.div`
   width: 300px;
+  display: flex;
+  margin: auto;
 
   @media (min-width: 768px) {
     width: 600px;

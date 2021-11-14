@@ -41,11 +41,15 @@ const criticAnimation = keyframes`
 100% { font-size: 16px;  color: red;}
 `;
 
+const AnimationDiv = styled.div`
+  height: 50px;
+  overflow: hidden;
+`;
+
 const SummaryText = styled.div`
   text-align: center;
   font-size: 16px;
   animation: ${criticAnimation} 0.7s infinite;
-
   @media (min-width: 768px) {
     font-size: 20px;
   }
@@ -100,12 +104,16 @@ const Summary = () => {
           {timerValue}
           sec
         </SummaryScore>
-        <SummaryText>
-          {(rightAnswers.length <= 2 && <p>Are you a f@cking millenial?</p>) ||
-            (rightAnswers.length <= 5 && <p>You are mediocre!</p>) ||
-            (rightAnswers.length <= 8 && <p>You rock!</p>) ||
-            (rightAnswers.length >= 9 && <p>You are a legend!</p>)}
-        </SummaryText>
+        <AnimationDiv>
+          <SummaryText>
+            {(rightAnswers.length <= 2 && (
+              <p>Are you a f@cking millenial?</p>
+            )) ||
+              (rightAnswers.length <= 5 && <p>You are mediocre!</p>) ||
+              (rightAnswers.length <= 8 && <p>You rock!</p>) ||
+              (rightAnswers.length >= 9 && <p>You are a legend!</p>)}
+          </SummaryText>
+        </AnimationDiv>
         <Answers />
 
         <Link to="/">

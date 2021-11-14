@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 const TimerStyle = styled.p`
   display: inline-block;
-  margin: 0;
+  margin: 15px;
 
   @media (min-width: 768px) {
     margin: 20px;
