@@ -10,6 +10,7 @@ import { timerSlice } from "../reducers/timer";
 const MainSummaryContainer = styled.div`
   display: flex;
   justify-content: center;
+  margin-top: 30px;
 `;
 
 const SummaryContainer = styled.div`
@@ -28,10 +29,10 @@ const SummaryContainer = styled.div`
   }
 `;
 
-const SummaryScore = styled.h2`
+const SummaryScore = styled.h1`
   display: flex;
   flex-direction: column;
-  font-size: 16px;
+  font-size: 15px;
   font-style: italic;
 `;
 
@@ -107,7 +108,7 @@ const Summary = () => {
         <AnimationDiv>
           <SummaryText>
             {(rightAnswers.length <= 2 && (
-              <p>Are you a f@cking millenial?</p>
+              <p>You are a f@cking millenial?</p>
             )) ||
               (rightAnswers.length <= 5 && <p>You are mediocre!</p>) ||
               (rightAnswers.length <= 8 && <p>You rock!</p>) ||
